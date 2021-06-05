@@ -53,7 +53,7 @@ dotImage = function(file = NULL, px = 20, py = NULL, white = T,
   return(x)
 }
 
-x1 = dotImage(file = "E:/Dropbox/test/test21.jpg",
+x1 = dotImage(file = "test7.jpg",
               px = 50,
               # py = 50, 
               white = F,
