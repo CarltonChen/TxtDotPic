@@ -43,7 +43,6 @@ dotImage = function(file = NULL, px = 20, py = NULL, white = T,
       }else{
         b = 10240 + b
       }
-      # b = max(sum(as.vector(a)*p), 1)
       x[i,j] = intToUtf8(b)
     }
   }
@@ -53,18 +52,13 @@ dotImage = function(file = NULL, px = 20, py = NULL, white = T,
   return(x)
 }
 
-x1 = dotImage(file = "test7.jpg",
-              px = 50,
+x1 = dotImage(file = "test6.jpg",
+              px =30,
               # py = 50, 
               white = F,
-              dark = 0.6,
+              dark = 0.4,
               scratch = F)
 
-# print(intToUtf8(10240+b))
-# for(i in 0:7) print(intToUtf8(10240+2^i)
-# p = matrix(2^c(0, 1, 2, 6, 3, 4, 5, 7), nrow = 4)
-# a = matrix(c(0,0,
-#              0,0,
-#              0,0,
-#              0,1), nrow = 4, byrow = T)
-# b = sum(a*p))
+f = file("test_pic.txt", open = "w", encoding = "native.enc")
+writeLines(x1, con = f, useBytes = T)
+close(f)
